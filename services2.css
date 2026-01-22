@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* HEADER */
+.header {
+    background-color: #1b4332;
+    padding: 15px 0;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3cb4ff;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    z-index: 1;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 4px;
+    background-color: #3cb4ff;
+    border-radius: 10px;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.service-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* ICONS */
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.icon.blue {
+    background-color: #e8f1ff;
+    color: #2f6bff;
+}
+
+.icon.orange {
+    background-color: #fff0e0;
+    color: #ff8c1a;
+}
+
+.icon.green {
+    background-color: #e6fff0;
+    color: #22b573;
+}
+
+.icon.purple {
+    background-color: #f1e6ff;
+    color: #9b5cff;
+}
+
+/* SOCIAL LINKS SECTION */
+.social-section {
+    background-color: #1b4332;
+    padding: 35px 0;
+}
+
+.social-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.social-container p {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social.insta {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social.x {
+    background-color: #000000;
+}
+
+.social.whatsapp {
+    background-color: #25d366;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1b4332;
+    color: white;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
